@@ -27,7 +27,7 @@ console.log(date);
 ## 转义 HTML 中的特殊字符
 
 ```js
-// 调用 htmlEscape 格式化时间
+// 调用 htmlEscape
 const str = "<script type='text/javascript'>alert('test')&</script>";
 
 const strEscape = quyunzhao_tools.htmlEscape(str);
@@ -39,7 +39,7 @@ console.log(strEscape);
 ## 还原 HTML 中的特殊字符
 
 ```js
-// 调用 htmlEscape 格式化时间
+// 调用 htmlUnEscape
 const str =
   "&lt;script type='text/javascript'&gt;alert('test')&amp;&lt;/script&gt;";
 
