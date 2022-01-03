@@ -23,3 +23,8 @@ const dateFormate = (dataStr = new Date()) => {
 const addZero = (n) => {
   return n < 9 ? "0" + n : n;
 };
+
+// 暴漏格式化组件
+module.exports = {
+  dateFormate,
+};
