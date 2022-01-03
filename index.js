@@ -41,13 +41,13 @@ const htmlEscape = (str) => {
   return str.replace(/<|>|"|&/g, (match) => {
     switch (match) {
       case "<":
-        return "&lt";
+        return "&lt;";
       case ">":
-        return "&gt";
+        return "&gt;";
       case '"':
-        return "&quot";
+        return "&quot;";
       case "&":
-        return "&amp";
+        return "&amp;";
     }
   });
 };
