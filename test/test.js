@@ -1,3 +1,7 @@
 const m = require("../index");
+const date = m.dateFormate();
+console.log(date);
 
-console.log(m.dateFormate());
+const str = "<script>alert('ssss') &  </script>";
+
+console.log(m.htmlEscape(str));

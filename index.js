@@ -1,6 +1,12 @@
 // 包的入口文件
 
 // 格式化日期
+/**
+ * @param  Date  new Date()
+ * @since 2022/1/3
+ * @version 1.0.0
+ * @author QuYunZhao
+ */
 const dateFormate = (dataStr = new Date()) => {
   const dt = new Date(dataStr);
 
@@ -24,7 +30,30 @@ const addZero = (n) => {
   return n < 9 ? "0" + n : n;
 };
 
+// 定义转义字符的方法
+/**
+ * @param  string  string
+ * @since 2022/1/3
+ * @version 1.0.0
+ * @author QuYunZhao
+ */
+const htmlEscape = (str) => {
+  return str.replace(/<|>|"|&/g, (match) => {
+    switch (match) {
+      case "<":
+        return "&lt";
+      case ">":
+        return "&gt";
+      case '"':
+        return "&quot";
+      case "&":
+        return "&amp";
+    }
+  });
+};
+
 // 暴漏格式化组件
 module.exports = {
   dateFormate,
+  htmlEscape,
 };
